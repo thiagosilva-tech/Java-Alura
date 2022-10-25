@@ -1,5 +1,12 @@
 package br.com.unibank.banco.modelo;
 
+
+/**
+ * Classe que representa um cliente no Unibank.
+ * 
+ * @author Thiago Silva
+ * @version 0.1
+ */
 public class Cliente {
 
 	private String nome;
