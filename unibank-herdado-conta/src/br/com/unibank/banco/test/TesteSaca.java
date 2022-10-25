@@ -1,3 +1,8 @@
+package br.com.unibank.banco.test;
+
+import br.com.unibank.banco.modelo.Conta;
+import br.com.unibank.banco.modelo.ContaCorrente;
+import br.com.unibank.banco.modelo.SaldoInsuficienteException;
 
 public class TesteSaca {
 

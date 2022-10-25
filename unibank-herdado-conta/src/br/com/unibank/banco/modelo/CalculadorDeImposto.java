@@ -1,4 +1,6 @@
+package br.com.unibank.banco.modelo;
 
+//br.com.unibank.banco.modelo.CalculadorDeImposto => FQN
 public class CalculadorDeImposto {
 	
 	private double totalImposto;

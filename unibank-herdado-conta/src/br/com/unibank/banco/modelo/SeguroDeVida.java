@@ -1,3 +1,4 @@
+package br.com.unibank.banco.modelo;
 
 public class SeguroDeVida implements Tributavel {
 

@@ -1,3 +1,5 @@
+package br.com.unibank.banco.modelo;
+
 
 public class SaldoInsuficienteException extends Exception {
 	
