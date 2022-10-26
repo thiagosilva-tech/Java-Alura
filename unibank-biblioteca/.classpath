@@ -7,5 +7,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="libs/unibank-1.0.jar"/>
+	<classpathentry kind="lib" path="libs/unibank-1.0-executavel.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
