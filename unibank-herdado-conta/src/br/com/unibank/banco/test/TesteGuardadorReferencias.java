@@ -2,14 +2,13 @@ package br.com.unibank.banco.test;
 
 import br.com.unibank.banco.modelo.Conta;
 import br.com.unibank.banco.modelo.ContaCorrente;
-import br.com.unibank.banco.modelo.GuardadorDeContas;
+import br.com.unibank.banco.modelo.GuardadorDeReferencias;
 
-public class Teste {
+public class TesteGuardadorReferencias {
 
 	public static void main(String[] args) {
 		
-		GuardadorDeContas guardador = new GuardadorDeContas();
-		
+		GuardadorDeReferencias guardador = new GuardadorDeReferencias();
 		
 		Conta cc = new ContaCorrente(22, 11);
 		guardador.adiciona(cc);
@@ -20,7 +19,7 @@ public class Teste {
 		int tamanho = guardador.getQuantidadeDeElemtos();
 		System.out.println(tamanho);
 		
-		Conta ref = guardador.getReferencia(1);
+		Conta ref = (Conta) guardador.getReferencia(1);
 		System.out.println(ref.getNumero());
 		
 	}
