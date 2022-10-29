@@ -4,12 +4,15 @@ import java.util.ArrayList;
 import br.com.unibank.banco.modelo.Conta;
 import br.com.unibank.banco.modelo.ContaCorrente;
 
-public class Teste {
+public class TesteArrayList {
 
 	public static void main(String[] args) {
-
+		
+		//Generics
 		ArrayList<Conta> lista = new ArrayList<Conta>();
-
+		
+		ArrayList<String> nomes = new ArrayList<String>();
+		
 		Conta cc = new ContaCorrente(22, 11);
 		lista.add(cc);
 
