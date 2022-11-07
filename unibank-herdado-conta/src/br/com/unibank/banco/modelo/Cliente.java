@@ -1,6 +1,5 @@
 package br.com.unibank.banco.modelo;
 
-
 /**
  * Classe que representa um cliente no Unibank.
  * 
