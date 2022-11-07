@@ -9,7 +9,7 @@ public class TesteUnicodeEEncoding {
 	public static void main(String[] args) throws UnsupportedEncodingException {
 
 		String s = "ç";
-		System.out.println(s.codePointAt(0));
+		System.out.println(s.codePointAt(0));//unicode
 		
 		Charset charset = Charset.defaultCharset();
 		System.out.println(charset.displayName());

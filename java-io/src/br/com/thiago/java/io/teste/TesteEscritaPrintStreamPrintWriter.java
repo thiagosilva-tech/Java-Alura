@@ -14,7 +14,7 @@ public class TesteEscritaPrintStreamPrintWriter{
 		
 //		PrintStream  ps = new PrintStream(new File("poema2.txt"));
 		
-		PrintWriter ps = new PrintWriter("poema2.txt");
+		PrintWriter ps = new PrintWriter("poema2.txt", "UTF-8");
 		
 		ps.println("De tudo, ao meu amor serei atento");
 		ps.println();

@@ -12,7 +12,7 @@ public class TesteLeitura {
 		
 		//Fluxo de entrada com Arquivo
 		InputStream fis = new FileInputStream("poema.txt");
-		Reader isr = new InputStreamReader(fis);
+		Reader isr = new InputStreamReader(fis, "UTF-8");
 		BufferedReader br = new BufferedReader(isr);
 		
 		String linha = br.readLine();
