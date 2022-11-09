@@ -1,4 +1,8 @@
-package br.com.alura;
+package br.com.alura.teste;
+
+import br.com.alura.Aluno;
+import br.com.alura.Aula;
+import br.com.alura.Curso;
 
 public class TestaCursoComAluno {
 	public static void main(String[] args) {
@@ -22,6 +26,17 @@ public class TestaCursoComAluno {
 			System.out.println(a);
 		});
 		
+//		Set<Aluno> alunos = javaColecoes.getAlunos();
+//		Iterator<Aluno> iterador = alunos.iterator();
+//		while(iterador.hasNext()) {
+//			Aluno proximo = iterador.next();
+//			System.out.println(proximo);
+//		}
+		
+//		for(Aluno a : javaColecoes.getAlunos()) {
+//			System.out.println(a);
+//		}
+	
 		System.out.println("O aluno " + a1 + " está matriculado?");
 		System.out.println(javaColecoes.estaMatriculado(a1));
 		
