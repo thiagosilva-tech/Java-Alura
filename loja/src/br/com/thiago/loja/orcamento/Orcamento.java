@@ -25,13 +25,15 @@ public class Orcamento {
 	public void aprovar() {
 		this.situacao.aprovar(this);
 	}
+
 	public void reprovar() {
 		this.situacao.reprovar(this);
 	}
+
 	public void finalizar() {
 		this.situacao.finalizar(this);
 	}
-	
+
 	public BigDecimal getValor() {
 		return valor;
 	}
@@ -39,10 +41,11 @@ public class Orcamento {
 	public int getQuantidadeItens() {
 		return quantidadeItens;
 	}
-	
+
 	public SituacaoOrcamento getSituacao() {
 		return situacao;
 	}
+
 	public void setSituacao(SituacaoOrcamento situacao) {
 		this.situacao = situacao;
 	}

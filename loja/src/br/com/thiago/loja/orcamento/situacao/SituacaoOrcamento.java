@@ -5,16 +5,20 @@ import br.com.thiago.loja.DomainException;
 import br.com.thiago.loja.orcamento.Orcamento;
 
 public abstract class SituacaoOrcamento {
-	
-	public abstract BigDecimal calcularValorDescontoExtra(Orcamento orcamento);
-	
+
+	public BigDecimal calcularValorDescontoExtra(Orcamento orcamento) {
+		return BigDecimal.ZERO;
+	}
+
 	public void aprovar(Orcamento orcamento) throws DomainException {
 		throw new DomainException("Orcamento nao pode ser aprovado!");
 	}
+
 	public void reprovar(Orcamento orcamento) throws DomainException {
 		throw new DomainException("Orcamento nao pode ser reprovado!");
 	}
-	public void finalizar(Orcamento orcamento) throws DomainException{
+
+	public void finalizar(Orcamento orcamento) throws DomainException {
 		throw new DomainException("Orcamento nao pode ser finalizado!");
 	}
 }
