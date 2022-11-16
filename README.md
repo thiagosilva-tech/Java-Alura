@@ -10,3 +10,5 @@ Curso de Java Orientado a Objeto
 - java.lang
 - java.uitl
 - java.io
+- java.collections
+- Desing Patterns
