@@ -2,7 +2,6 @@ package br.com.thiago.loja.teste;
 import java.math.BigDecimal;
 
 import br.com.thiago.loja.imposto.CalculadoraDeImpostos;
-import br.com.thiago.loja.imposto.ICMS;
 import br.com.thiago.loja.orcamento.ItemOrcamento;
 import br.com.thiago.loja.orcamento.Orcamento;
 
