@@ -1,0 +1,19 @@
+<settings xmlns="http://maven.apache.org/SETTINGS¹1.0.0"
+	xmlns:xsi="http://w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/sdx/
+<settings-1.0.0.xsd">
+//código omitido
+
+    <proxies>
+        <proxy>
+                    <id>meu-proxy</id>
+                    <active>true</active>
+                    <protocol>http</protocol>
+                    <host>http://ip</host>
+                    <port>3128</port>
+                    <username>username</username>
+                    <password>password</password>
+        </proxy>
+    </proxies>
+
+    </settings>
