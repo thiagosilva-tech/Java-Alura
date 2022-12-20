@@ -9,8 +9,6 @@ public class TestaListagem {
 		
 		ConnectionFactory connectionFactory = new ConnectionFactory();
 		Connection connection = connectionFactory.recuperarConexao();
-		
-		
 		PreparedStatement stm = connection.prepareStatement
 				("SELECT ID, NOME, DESCRICAO FROM PRODUTO");
 		stm.execute();
@@ -24,6 +22,7 @@ public class TestaListagem {
 			System.out.println(nome);
 			String descricao = rst.getString("DESCRICAO");
 			System.out.println(descricao);
+			System.out.println("");
 		}
 		connection.close();
 	}
