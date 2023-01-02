@@ -1,4 +1,4 @@
-package br.com.thiago.jdbc;
+package br.com.thiago.jdbc.factory;
 import java.sql.Connection;
 import java.sql.SQLException;
 

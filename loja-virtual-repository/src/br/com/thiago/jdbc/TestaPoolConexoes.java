@@ -1,6 +1,8 @@
 package br.com.thiago.jdbc;
 import java.sql.SQLException;
 
+import br.com.thiago.jdbc.factory.ConnectionFactory;
+
 public class TestaPoolConexoes {
 	
 	public static void main(String[] args) throws SQLException {
