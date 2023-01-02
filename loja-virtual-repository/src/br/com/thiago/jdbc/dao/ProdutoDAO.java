@@ -8,6 +8,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.thiago.jdbc.modelo.Categoria;
 import br.com.thiago.jdbc.modelo.Produto;
 
 public class ProdutoDAO {
@@ -36,20 +37,42 @@ public class ProdutoDAO {
 			}
 		}
 	}
-	
-	public List<Produto> listar() throws SQLException{
+
+	public List<Produto> listar() throws SQLException {
+		List<Produto> produtos = new ArrayList<>();
+
+		String sql = "SELECT ID, NOME, DESCRICAO FROM PRODUTO";
+
+		try (PreparedStatement pstm = connection.prepareStatement(sql)) {
+			pstm.execute();
+
+			try (ResultSet rst = pstm.getResultSet()) {
+				while (rst.next()) {
+					Produto produto = new Produto(rst.getInt(1), rst.getString(2), rst.getString(3));
+
+					produtos.add(produto);
+				}
+			}
+		}
+		return produtos;
+	}
+
+	public List<Produto> buscar(Categoria ct) throws SQLException {
 		List<Produto> produtos = new ArrayList<>();
 		
-		String sql = "SELECT ID, NOME, DESCRICAO FROM PRODUTO";
-		
-		try(PreparedStatement pstm = connection.prepareStatement(sql)){
+		System.out.println("Executando a query de buscar produto por categoria");
+
+		String sql = "SELECT ID, NOME, DESCRICAO FROM PRODUTO WHERE CATEGORIA_ID = ?";
+
+		try (PreparedStatement pstm = connection.prepareStatement(sql)) {
+			pstm.setInt(1,  ct.getId());
 			pstm.execute();
-			
-			try(ResultSet rst = pstm.getResultSet()){
-				while(rst.next()) {
+
+			try (ResultSet rst = pstm.getResultSet()) {
+				while (rst.next()) {
 					Produto produto = new Produto(rst.getInt(1), rst.getString(2), rst.getString(3));
-					
-				produtos.add(produto);
+
+					produtos.add(produto);
 				}
 			}
 		}
