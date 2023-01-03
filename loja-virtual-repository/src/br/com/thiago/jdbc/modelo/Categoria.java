@@ -9,11 +9,9 @@ public class Categoria {
 	private String nome;
 	private List<Produto> produtos = new ArrayList<Produto>();
 	
-	public Categoria(Integer id, String nome) {
-		
+	public Categoria(Integer id, String nome) {		
 		this.id = id;
-		this.nome = nome;
-		 
+		this.nome = nome;		 
 	}
 
 	public String getNome() {
