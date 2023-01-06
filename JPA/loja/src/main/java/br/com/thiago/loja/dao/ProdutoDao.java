@@ -16,4 +16,7 @@ public class ProdutoDao {
 		this.em.persist(produto);
 	}
 	
+	public void atualizar(Produto produto) {
+		this.em.merge(produto);
+	}
 }
