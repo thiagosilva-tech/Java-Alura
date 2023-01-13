@@ -1,5 +1,6 @@
 <%
-String nomeEmpresa = "Alura";
+//scriplet
+String nomeEmpresa = (String)request.getAttribute("empresa");
 System.out.println(nomeEmpresa);
 %>
 
@@ -7,7 +8,7 @@ System.out.println(nomeEmpresa);
 
 <html><body>
 
-Empresa <% out.println(nomeEmpresa); %> cadastrada com suceso!
+Empresa <%= nomeEmpresa %> cadastrada com suceso!
 
 </body></html>
 
