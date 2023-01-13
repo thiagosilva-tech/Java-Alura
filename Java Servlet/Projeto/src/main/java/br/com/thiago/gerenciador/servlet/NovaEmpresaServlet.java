@@ -12,7 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/novaEmpresa")
 public class NovaEmpresaServlet extends HttpServlet {
 
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 
 		System.out.println("Cadastrando nova empresa");
 
