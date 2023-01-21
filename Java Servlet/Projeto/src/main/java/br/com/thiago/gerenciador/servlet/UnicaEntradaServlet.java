@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import br.com.thiago.gerenciador.acao.Acao;
 
@@ -20,27 +21,35 @@ public class UnicaEntradaServlet extends HttpServlet {
 
 		String paramAcao = request.getParameter("acao");
 		
+		HttpSession sessao = request.getSession();
+		boolean usuarioNaoEstaLogado = (sessao.getAttribute("usuarioLogado") == null);
+		boolean ehUmaAcaoProtegida = !(paramAcao.equals("Login") || paramAcao.equals("LoginForm"));
+		
+		if (ehUmaAcaoProtegida && usuarioNaoEstaLogado) {
+			response.sendRedirect("entrada?acao=LoginForm");
+			return;
+		}		
+
 		String nomaDaClasse = "br.com.thiago.gerenciador.acao." + paramAcao;
-		
-		
+
 		String nome;
 		try {
-			Class classe = Class.forName(nomaDaClasse); //Carrega a classe com o nome
+			Class classe = Class.forName(nomaDaClasse); // Carrega a classe com o nome
 			Acao acao = (Acao) classe.newInstance();
 			nome = acao.executa(request, response);
 		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException | ServletException
 				| IOException e) {
 			throw new ServletException(e);
 		}
-		
+
 		String[] tipoEEndereco = nome.split(":");
 		if (tipoEEndereco[0].equals("forward")) {
 			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/view/" + tipoEEndereco[1]);
 			rd.forward(request, response);
 		} else {
 			response.sendRedirect(tipoEEndereco[1]);
-		}		
-		
+		}
+
 //		paramAcao.executa(req,res);
 
 //		String nome = null;
@@ -64,6 +73,5 @@ public class UnicaEntradaServlet extends HttpServlet {
 //			nome = acao.executa(request, response);
 //		}
 
-		
 	}
 }
