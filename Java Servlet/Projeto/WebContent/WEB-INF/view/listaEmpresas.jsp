@@ -12,9 +12,9 @@
 <title>Java Standard Taglib</title>
 </head>
 <body>
-
+	<c:import url="logout-parcial.jsp"></c:import>
+		
 	Usuario Logado: ${usuarioLogado.login}
-
 	<br>
 	<br>
 	<br>
@@ -25,7 +25,8 @@
 	</c:if>
 
 	Lista de empresas:
-	
+	<br>
+	<a href="entrada?acao=NovaEmpresaForm">Cadastrar</a>
 	<br />
 
 	<ul>
