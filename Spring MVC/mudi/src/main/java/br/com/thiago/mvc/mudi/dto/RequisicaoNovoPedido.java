@@ -6,7 +6,7 @@ import br.com.thiago.mvc.mudi.model.Pedido;
 
 public class RequisicaoNovoPedido {
 
-	@NotBlank
+	@NotBlank 
 	private String nomeProduto;
 
 	@NotBlank
