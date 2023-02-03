@@ -1,6 +1,5 @@
 package br.com.thiago.mvc.mudi.repository;
 
-
 import java.util.List;
 
 import org.springframework.cache.annotation.Cacheable;

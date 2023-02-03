@@ -33,17 +33,15 @@ public class PedidoController {
 	
 	@PostMapping("novo")
 	public String novo(@Valid RequisicaoNovoPedido requisicao, BindingResult result) {	
-		
 		if(result.hasErrors()) {
 			return "pedido/formulario";
 		}
 		
 		String username = SecurityContextHolder.getContext().getAuthentication().getName();
-		User user = userRepository.findByUsername(username);
 		
+		User usuario = userRepository.findByUsername(username);		
 		Pedido pedido = requisicao.toPedido();
-		pedido.setUser(user);
-		
+		pedido.setUser(usuario);		
 		pedidoRepository.save(pedido);		
 		return "redirect:/home";
 	}
