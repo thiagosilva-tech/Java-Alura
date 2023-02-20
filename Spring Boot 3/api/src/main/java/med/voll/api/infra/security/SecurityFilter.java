@@ -43,6 +43,5 @@ public class SecurityFilter extends OncePerRequestFilter {
             return authorizationHeader.replace("Bearer ", "");
         }
         return null;
-
     }
 }
