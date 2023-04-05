@@ -70,6 +70,22 @@ A sintaxe do Java é semelhante à de outras linguagens de programação, como C
 
 - O JDBC permite que os programas Java se comuniquem com bancos de dados relacionais, como o MySQL, o Oracle e o SQL Server.
 
+<h5>JPA</h5>
+
+- JPA (Java Persistence API) é uma especificação do Java para gerenciamento de persistência de dados em aplicativos Java.
+
+- Ele fornece uma maneira fácil de persistir dados em um banco de dados relacional usando objetos Java.
+
+- JPA usa anotações Java para mapear objetos Java para tabelas em um banco de dados relacional.
+
+<h5>Servlet</h5>
+
+- Servlets são classes Java que são usadas para processar solicitações e gerar respostas em aplicativos web.
+
+- Eles são usados para criar aplicativos web escaláveis e de alto desempenho.
+
+- Servlets são gerenciados por um contêiner de servlets, como Tomcat ou Jetty.
+
 <h5>Design Patterns</h5>
 
 - Design Patterns são soluções comprovadas para problemas comuns em programação de software.
