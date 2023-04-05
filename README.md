@@ -16,6 +16,22 @@ A sintaxe do Java é semelhante à de outras linguagens de programação, como C
 
 - Java é uma linguagem fortemente tipada, o que significa que todos os tipos devem ser especificados explicitamente.
 
+<h5>Enum</h5>
+
+-Enum é um tipo de dado em Java que consiste em um conjunto fixo de constantes nomeadas.
+
+-Um enum é definido usando a palavra-chave enum e é uma classe especial que pode ter seus próprios métodos e campos, além de constantes.
+
+-Enums são frequentemente usados para definir um conjunto fixo de valores, como dias da semana, opções de menu e tipos de moeda.
+
+<h5>Collections</h5>
+
+-Collections em Java são classes que implementam várias estruturas de dados, como listas, conjuntos e mapas.
+
+-As coleções são implementadas no pacote java.util e fornecem métodos para adicionar, remover, acessar e manipular elementos nas estruturas de dados.
+
+-As coleções são frequentemente usadas em programação para armazenar e manipular grandes quantidades de dados.
+
 <h5>Orientação a objetos</h5>
 
 - Java é uma linguagem orientada a objetos, o que significa que tudo em Java é um objeto.
@@ -54,8 +70,26 @@ A sintaxe do Java é semelhante à de outras linguagens de programação, como C
 
 - O JDBC permite que os programas Java se comuniquem com bancos de dados relacionais, como o MySQL, o Oracle e o SQL Server.
 
+<h5>Design Patterns</h5>
 
-- Enums no Java;
+-Design Patterns são soluções comprovadas para problemas comuns em programação de software.
 
-- java.collections
-- Desing Patterns
+-Eles são frequentemente usados para criar software flexível, escalável e fácil de manter.
+
+-Existem vários padrões de design comuns, como Singleton, Factory, Observer, Decorator e Strategy.
+
+<h5>Spring Boot</h5>
+
+-Spring Boot é um framework para desenvolvimento de aplicativos Java que facilita a criação de aplicativos com configuração mínima.
+
+-Ele é baseado no framework Spring e usa várias bibliotecas de terceiros para simplificar o desenvolvimento de aplicativos.
+
+-Spring Boot fornece um modelo de programação baseado em anotações para configuração automática e é frequentemente usado em aplicativos web.
+
+<h5>Spring MVC</h5>
+
+-Spring MVC é um framework baseado em modelo-vista-controlador (MVC) para desenvolvimento de aplicativos web em Java.
+
+-Ele fornece uma estrutura para desenvolvimento de aplicativos web que é fácil de usar e escalável.
+
+-Spring MVC usa o framework Spring subjacente para gerenciar a camada de modelo e fornece suporte para vários formatos de visualização, como JSP, Thymeleaf e Velocity.
